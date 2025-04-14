@@ -1,5 +1,6 @@
 package com.example.multiactivity
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -19,6 +20,20 @@ class DetailActivity : AppCompatActivity() {
         }
 
         val closeButton = findViewById<Button>(R.id.closeButton)
+        val bundle = intent.extras
+
+        if (bundle != null){
+           val user = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+               bundle.getParcelable ("user", User::class.java)
+           } else {
+               bundle.getParcelable("user")
+            }
+            println(user?.userName)
+            println(user?.n1Peso)
+            println(user?.n1)
+        }
+
+
         closeButton.setOnClickListener(){
             finish()
         }
