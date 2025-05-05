@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/heroImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/batman" />
+
+    <TextView
+        android:id="@+id/heroName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batman"
+        android:textColor="#AD2E2E"
+        app:layout_constraintBottom_toBottomOf="@+id/heroImage"
+        app:layout_constraintStart_toEndOf="@+id/heroImage"
+        app:layout_constraintTop_toTopOf="@+id/heroImage"
+        app:layout_constraintVertical_bias="0.198" />
+
+    <TextView
+        android:id="@+id/heroCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DC Comics"
+        app:layout_constraintBottom_toBottomOf="@+id/heroImage"
+        app:layout_constraintStart_toEndOf="@+id/heroImage"
+        app:layout_constraintTop_toTopOf="@+id/heroImage"
+        app:layout_constraintVertical_bias="0.831" />
+</androidx.constraintlayout.widget.ConstraintLayout>
